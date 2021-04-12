@@ -13,6 +13,5 @@ RUN npm install
 
 # 앱 소스 추가
 COPY . .
+ENTRYPOINT npm run build
 
-EXPOSE 9000
-CMD [ "node", "server.js" ]
