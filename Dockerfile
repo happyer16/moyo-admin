@@ -14,7 +14,6 @@ COPY . .
 EXPOSE 9000 9000
 RUN npm install imagemin-webpack-plugin
 RUN npm install
-CMD ["npm","run","build"]
 CMD ["npm","run","preview"]
 
 
