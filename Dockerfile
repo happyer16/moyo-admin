@@ -1,4 +1,9 @@
 FROM node:12
+
+#RUN mkdir -p /app
+#WORKDIR /src
+#ADD . /app
+
 # 앱 디렉터리 생성
 WORKDIR /src
 
@@ -7,11 +12,11 @@ WORKDIR /src
 # 와일드카드를 사용
 COPY package*.json ./
 
+RUN npm install -g n
+RUN npm install imagemin-webpack-plugin
 RUN npm install
-# 프로덕션을 위한 코드를 빌드하는 경우
-# RUN npm ci --only=production
+CMD ["npm","run","build"]
+CMD ["npm","run","preview"]
 
-# 앱 소스 추가
-COPY . .
-ENTRYPOINT npm run build
+EXPOSE 9000 9000
 
