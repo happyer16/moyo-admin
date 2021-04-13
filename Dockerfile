@@ -12,7 +12,6 @@ WORKDIR /src
 # 와일드카드를 사용
 COPY package*.json ./
 
-RUN npm install -g n
 RUN npm install imagemin-webpack-plugin
 RUN npm install
 CMD ["npm","run","build"]
