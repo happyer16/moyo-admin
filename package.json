@@ -9,6 +9,7 @@
     "clean": "rm -rf ./build",
     "build": "npm run clean && cross-env NODE_ENV=\"production\" webpack",
     "preview": "cross-env NODE_ENV=\"production\" webpack-dev-server",
+    "test2": "node .",
     "lint:js": "eslint ./src ./webpack ./*.js -f table --ext .js --ext .jsx",
     "lint:scss": "stylelint ./src/**/*.scss --syntax scss",
     "lint": "npm run lint:js && npm run lint:scss"
